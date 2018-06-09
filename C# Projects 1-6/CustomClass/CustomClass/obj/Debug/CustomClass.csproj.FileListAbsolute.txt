@@ -1,0 +1,6 @@
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\CustomClass\CustomClass\bin\Debug\CustomClass.exe.config
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\CustomClass\CustomClass\bin\Debug\CustomClass.exe
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\CustomClass\CustomClass\bin\Debug\CustomClass.pdb
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\CustomClass\CustomClass\obj\Debug\CustomClass.csprojResolveAssemblyReference.cache
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\CustomClass\CustomClass\obj\Debug\CustomClass.exe
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\CustomClass\CustomClass\obj\Debug\CustomClass.pdb

@@ -1,0 +1,6 @@
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Manyagi_Dennis_Conditionals\Manyagi_Dennis_Conditionals\bin\Debug\Manyagi_Dennis_Conditionals.exe.config
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Manyagi_Dennis_Conditionals\Manyagi_Dennis_Conditionals\bin\Debug\Manyagi_Dennis_Conditionals.exe
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Manyagi_Dennis_Conditionals\Manyagi_Dennis_Conditionals\bin\Debug\Manyagi_Dennis_Conditionals.pdb
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Manyagi_Dennis_Conditionals\Manyagi_Dennis_Conditionals\obj\Debug\Manyagi_Dennis_Conditionals.csprojResolveAssemblyReference.cache
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Manyagi_Dennis_Conditionals\Manyagi_Dennis_Conditionals\obj\Debug\Manyagi_Dennis_Conditionals.exe
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Manyagi_Dennis_Conditionals\Manyagi_Dennis_Conditionals\obj\Debug\Manyagi_Dennis_Conditionals.pdb

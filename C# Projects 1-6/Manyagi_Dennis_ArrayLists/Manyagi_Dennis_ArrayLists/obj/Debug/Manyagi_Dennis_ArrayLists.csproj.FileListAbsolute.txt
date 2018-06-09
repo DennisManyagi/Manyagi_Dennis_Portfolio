@@ -1,0 +1,6 @@
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Manyagi_Dennis_ArrayLists\Manyagi_Dennis_ArrayLists\bin\Debug\Manyagi_Dennis_ArrayLists.exe.config
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Manyagi_Dennis_ArrayLists\Manyagi_Dennis_ArrayLists\bin\Debug\Manyagi_Dennis_ArrayLists.exe
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Manyagi_Dennis_ArrayLists\Manyagi_Dennis_ArrayLists\bin\Debug\Manyagi_Dennis_ArrayLists.pdb
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Manyagi_Dennis_ArrayLists\Manyagi_Dennis_ArrayLists\obj\Debug\Manyagi_Dennis_ArrayLists.csprojResolveAssemblyReference.cache
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Manyagi_Dennis_ArrayLists\Manyagi_Dennis_ArrayLists\obj\Debug\Manyagi_Dennis_ArrayLists.exe
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Manyagi_Dennis_ArrayLists\Manyagi_Dennis_ArrayLists\obj\Debug\Manyagi_Dennis_ArrayLists.pdb

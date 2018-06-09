@@ -1,0 +1,6 @@
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Manyagi_Dennis_StringObjects\Manyagi_Dennis_StringObjects\bin\Debug\Manyagi_Dennis_StringObjects.exe.config
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Manyagi_Dennis_StringObjects\Manyagi_Dennis_StringObjects\bin\Debug\Manyagi_Dennis_StringObjects.exe
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Manyagi_Dennis_StringObjects\Manyagi_Dennis_StringObjects\bin\Debug\Manyagi_Dennis_StringObjects.pdb
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Manyagi_Dennis_StringObjects\Manyagi_Dennis_StringObjects\obj\Debug\Manyagi_Dennis_StringObjects.csprojResolveAssemblyReference.cache
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Manyagi_Dennis_StringObjects\Manyagi_Dennis_StringObjects\obj\Debug\Manyagi_Dennis_StringObjects.exe
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Manyagi_Dennis_StringObjects\Manyagi_Dennis_StringObjects\obj\Debug\Manyagi_Dennis_StringObjects.pdb
