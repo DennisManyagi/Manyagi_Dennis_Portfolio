@@ -62,6 +62,10 @@ comics += '</article>';
 
     }
 
+    //change load button link to new page
+    var change = document.getElementById("load");
+
+    change.href = "https://geeks.media/the-10-greatest-comic-book-stories-of-all-time";
 
 }
 
