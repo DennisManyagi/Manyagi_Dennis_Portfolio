@@ -12,11 +12,15 @@ xhr.onload = function(){
     var comicsSection = document.querySelector('#blog');
     if (comicsSection){
 
+        //create variable to store data
         var comics = '';
-        
+
+
+        //loop through each JSON object
         for (var i = 0; i < data.comics.length; i++){
 
 
+            //format HTML with encapsulated variables
 comics += '<article>';
 comics += '<p class = "thumbnail"><img src =" '+ data.comics[i].image + '"alt="' + data.comics[i].location+ '"></p>';
 
@@ -65,6 +69,7 @@ comics += '</article>';
     //change load button link to new page
     var change = document.getElementById("load");
 
+    //use href property to change link
     change.href = "https://geeks.media/the-10-greatest-comic-book-stories-of-all-time";
 
 }
