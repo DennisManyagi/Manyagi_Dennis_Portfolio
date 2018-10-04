@@ -9,77 +9,45 @@ xhr.onload = function(){
 
     //Insert the HTML articles & into section ( insertAdjacentHTML)
 
-    var comicsSection = document.querySelector('#blog');
-    if (comicsSection){
+    var movieSection = document.querySelector('#gallery');
+    if (movieSection){
 
         //create variable to store data
-        var comics = '';
+        var movie = '';
+
 
 
         //loop through each JSON object
-        for (var i = 0; i < data.comics.length; i++){
+        for (var i = 0; i < data.movies.length; i++){
 
 
             //format HTML with encapsulated variables
-            comics += '<article>';
-            comics += '<p class = "thumbnail"><img src =" '+ data.comics[i].image + '"alt="' + data.comics[i].location+ '"></p>';
+            movie += '<article>';
+            movie += '<p><img src =" '+ data.movies[i].image + '"alt="' + data.movies[i].name+ '"></p>';
+            movie += '<h3>' + data.movies[i].name + '</h3>';
+            movie += '<p>'+data.movies[i].description+'</p>';
+            movie += '</article>';
 
-            comics += '<h3>' + data.comics[i].location + '</h3>';
-            comics += '<h4 class = "location">' + data.comics[i].city+','+ data.comics[i].state + '</h4>';
-            comics += '<p>'+data.comics[i].description+'</p>';
-            comics += '<p><meter min="0" max ="5" value ="'+data.comics[i].rating +'">' + data.comics[i].rating+ 'out of 5</meter><a href="/rate">Rate it</a></p>';
-
-
-            comics += '<dl>';
-
-            comics += '<dt>Volume</dt>';
-            comics += '<dd>'+data.comics[i].volume +   '</dd>'
-
-
-            comics += '<dt>Issue</dt>';
-            comics += '<dd>'+data.comics[i].issue +   '</dd>'
-
-            comics += '<dt>Release Date</dt>';
-            comics += '<dd>'+data.comics[i].release+   '</dd>'
-
-            comics += '<dt>Read More</dt>';
-            comics += '<dd><p><a href="'+data.comics[i].link+'" target="_blank">View Info</a></p></dd>'
-
-
-
-
-            comics += '</dl>';
-
-
-
-            comics += '</article>';
-
-
+            movie += '<li><img src="'+ data.movies[i].image + '" alt=""></li>';
+            movie += '<li class="active"><img src="'+ data.movies[i].image + '" alt=""></li>';
+            movie += '<li><img src="'+ data.movies[i].image + '" alt=""></li>';
+            movie += '<li><img src="'+ data.movies[i].image + '" alt=""></li>';
+            movie += '<li><img src="'+ data.movies[i].image + '" alt=""></li>';
 
         }
 
-
-
-        comicsSection.querySelector('h2').insertAdjacentHTML('afterend', comics);
-
-
+        movieSection.querySelector('h2').insertAdjacentHTML('afterend', movie);
 
     }
 
-    //change load button link to new page
-    var change = document.getElementById("load");
 
-    //use href property to change link
-    change.href = "https://geeks.media/the-10-greatest-comic-book-stories-of-all-time";
 
 }
 
 
 
 
-//Call Ajax
-xhr.open('GET', 'https://dennismanyagi.github.io/comic/comics.json', true);
-xhr.send(null);
+
 
 
 
@@ -228,3 +196,8 @@ next.addEventListener("click", nextImage);
 
 var previous = document.querySelector('.pagination li:first-of-type button');
 previous.addEventListener("click", previousImage);
+
+
+//Call Ajax
+xhr.open('GET', 'https://dennismanyagi.github.io/comic/Horror.json', true);
+xhr.send(null);
