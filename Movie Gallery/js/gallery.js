@@ -20,49 +20,24 @@ xhr.onload = function(){
 
             //format HTML with encapsulated variables
             movie += '<article>';
-            movie += '<p><img src =" '+ data.movies[0].image + '"alt="' + data.movies[0].name+ '"></p>';
-            movie += '<h3>' + data.movies[0].name + '</h3>';
-            movie += '<p class="author">'+data.movies[0].description+'</p>';
+            movie += '<p><img src =" '+ data.movies[3].image + '"alt="' + data.movies[3].name+ '"></p>';
+            movie += '<h3>' + data.movies[3].name + '</h3>';
+            movie += '<p class="author">'+data.movies[3].description+'</p>';
             movie += '</article>';
 
 
 
+            var thumbnails ='';
 
-
-            //loop through list and add photos
-
-            for (var i = 0; 0 < data.movies.length; i++){
-
-
-                //find list
-                var list = document.querySelector("#gallery .pagination");
-
-                //create list item
-                var listItem = document.createElement("li");
-
-                //create image element
-                var photo = document.createElement("img");
-
-
-                //set photo source
-                photo.setAttribute('src',data.movies[i].image);
-
-
-                //add photo to list item li
-                listItem.appendChild(photo);
-
-                //add list item to unordered list
-                list.appendChild(listItem);
-
-
-
-            }
-
-
-
-
+        thumbnails += '<li><img src="' + data.movies[0].image + '"</li>';
+        thumbnails += '<li><img src="' + data.movies[1].image + '"</li>';
+        thumbnails += '<li><img src="' + data.movies[2].image + '"</li>';
+        thumbnails += '<li><img src="' + data.movies[3].image + '"</li>';
+        thumbnails += '<li><img src="' + data.movies[4].image + '"</li>';
 
         movieSection.querySelector('h2').insertAdjacentHTML('afterend', movie);
+
+        movieSection.querySelector('.pagination li').insertAdjacentHTML('afterend',thumbnails);
 
     }
 
