@@ -7,6 +7,7 @@
       <change afterPath="$USER_HOME$/WebstormProjects/News/.idea/modules.xml" afterDir="false" />
       <change afterPath="$USER_HOME$/WebstormProjects/News/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$USER_HOME$/WebstormProjects/News/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Movie Gallery/js/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Movie Gallery/js/gallery.js" afterDir="false" />
       <change beforePath="$USER_HOME$/Test" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -51,8 +52,8 @@
       <file leaf-file-name="jscomic.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jscomic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="58" column="9" lean-forward="true" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+            <state relative-caret-position="201">
+              <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="111" />
             </state>
           </provider>
         </entry>
@@ -90,7 +91,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="728" />
     <option name="y" value="47" />
     <option name="width" value="952" />
@@ -160,15 +161,15 @@
       <workItem from="1538110823264" duration="585000" />
       <workItem from="1538161718146" duration="5156000" />
       <workItem from="1538612034895" duration="1793000" />
-      <workItem from="1538618481392" duration="470000" />
+      <workItem from="1538618481392" duration="1285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23068000" />
+    <option name="totallyTimeSpent" value="23883000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="728" y="47" width="952" height="761" extended-state="1" />
+    <frame x="728" y="47" width="952" height="761" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22478992" />
@@ -332,8 +333,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jscomic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="58" column="9" lean-forward="true" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+        <state relative-caret-position="201">
+          <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="111" />
         </state>
       </provider>
     </entry>

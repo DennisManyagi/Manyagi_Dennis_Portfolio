@@ -29,14 +29,19 @@ xhr.onload = function(){
 
             var thumbnails ='';
 
-        thumbnails += '<li><img src="' + data.movies[0].image + '"</li>';
-        thumbnails += '<li><img src="' + data.movies[1].image + '"</li>';
-        thumbnails += '<li><img src="' + data.movies[2].image + '"</li>';
-        thumbnails += '<li><img src="' + data.movies[3].image + '"</li>';
-        thumbnails += '<li><img src="' + data.movies[4].image + '"</li>';
+            //loop through data and add images to list items
+          for (var i = 0; i < data.movies.length; i++){
 
+              thumbnails += '<li><img src =" '+ data.movies[i].image + '"alt="' + data.movies[i].name+ '"></li>';
+
+          }
+
+
+        //insert main image after h2 tag on html form
         movieSection.querySelector('h2').insertAdjacentHTML('afterend', movie);
 
+
+         //add thumbnails after 1st list item on ul class pagination
         movieSection.querySelector('.pagination li').insertAdjacentHTML('afterend',thumbnails);
 
     }
