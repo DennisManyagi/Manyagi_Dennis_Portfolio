@@ -17,24 +17,50 @@ xhr.onload = function(){
 
 
 
-        //loop through each JSON object
-        for (var i = 0; i < data.movies.length; i++){
-
 
             //format HTML with encapsulated variables
             movie += '<article>';
-            movie += '<p><img src =" '+ data.movies[i].image + '"alt="' + data.movies[i].name+ '"></p>';
-            movie += '<h3>' + data.movies[i].name + '</h3>';
-            movie += '<p>'+data.movies[i].description+'</p>';
+            movie += '<p><img src =" '+ data.movies[0].image + '"alt="' + data.movies[0].name+ '"></p>';
+            movie += '<h3>' + data.movies[0].name + '</h3>';
+            movie += '<p class="author">'+data.movies[0].description+'</p>';
             movie += '</article>';
 
-            movie += '<li><img src="'+ data.movies[i].image + '" alt=""></li>';
-            movie += '<li class="active"><img src="'+ data.movies[i].image + '" alt=""></li>';
-            movie += '<li><img src="'+ data.movies[i].image + '" alt=""></li>';
-            movie += '<li><img src="'+ data.movies[i].image + '" alt=""></li>';
-            movie += '<li><img src="'+ data.movies[i].image + '" alt=""></li>';
 
-        }
+
+
+
+            //loop through list and add photos
+
+            for (var i = 0; 0 < data.movies.length; i++){
+
+
+                //find list
+                var list = document.querySelector("#gallery .pagination");
+
+                //create list item
+                var listItem = document.createElement("li");
+
+                //create image element
+                var photo = document.createElement("img");
+
+
+                //set photo source
+                photo.setAttribute('src',data.movies[i].image);
+
+
+                //add photo to list item li
+                listItem.appendChild(photo);
+
+                //add list item to unordered list
+                list.appendChild(listItem);
+
+
+
+            }
+
+
+
+
 
         movieSection.querySelector('h2').insertAdjacentHTML('afterend', movie);
 
