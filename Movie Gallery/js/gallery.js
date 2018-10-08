@@ -1,3 +1,31 @@
+
+//hold json data
+var movieImage1 = '';
+var movieName1 = '';
+var movieDescription1 = '';
+
+var movieImage2 = '';
+var movieName2 = '';
+var movieDescription2 = '';
+
+var movieImage3 = '';
+var movieName3 = '';
+var movieDescription3 = '';
+
+var movieImage4 = '';
+var movieName4 = '';
+var movieDescription4 = '';
+
+var movieImage5 = '';
+var movieName5 = '';
+var movieDescription5 = '';
+
+
+
+
+
+
+
 //use ajax to load JSON file
 var xhr = new XMLHttpRequest();
 xhr.onload = function(){
@@ -26,13 +54,7 @@ xhr.onload = function(){
             movie += '</article>';
 
 
-        var thumbnails = '';
 
-        thumbnails += '<li><img src ="'+data.movies[0].image+'"</li>';
-        thumbnails += '<li><img src ="'+data.movies[1].image+'"</li>';
-        thumbnails += '<li><img src ="'+data.movies[2].image+'"</li>';
-        thumbnails += '<li><img src ="'+data.movies[3].image+'"</li>';
-        thumbnails += '<li><img src ="'+data.movies[4].image+'"</li>';
 
 
 
@@ -40,12 +62,38 @@ xhr.onload = function(){
         movieSection.querySelector('h2').insertAdjacentHTML('afterend', movie);
 
 
-         //add thumbnails after 1st list item on ul class pagination
-        movieSection.querySelector('.pagination li').insertAdjacentHTML('afterend',thumbnails);
+
+
+
+
+
+
+
 
     }
 
 
+
+//hold json data
+    movieImage1 = data.movies[0].image;
+    movieName1 = data.movies[0].name;
+    movieDescription1 = data.movies[0].description;
+
+    movieImage2 = data.movies[1].image;
+    movieName2 = data.movies[1].name;
+    movieDescription2 = data.movies[1].description;
+
+    movieImage3 = data.movies[2].image;
+    movieName3 = data.movies[2].name;
+    movieDescription3 = data.movies[2].description;
+
+    movieImage4 = data.movies[3].image;
+    movieName4 = data.movies[3].name;
+    movieDescription4 = data.movies[3].description;
+
+    movieImage5 = data.movies[4].image;
+    movieName5 = data.movies[4].name;
+    movieDescription5 = data.movies[4].description;
 
 }
 
@@ -62,42 +110,85 @@ var current = document.querySelector('#gallery img');
     //check name of current movie
     var currentName = document.querySelector('#gallery h3');
 
+    //check descr of current movie
+    var currentDescription = document.querySelector('.author');
 
-//links to all photos
-    var image1 = document.querySelector('.pagination li:nth-of-type('+2+') img').src;
-
-    var image2 = document.querySelector('.pagination li:nth-of-type('+3+') img').src;
-
-    var image3 = document.querySelector('.pagination li:nth-of-type('+4+') img').src;
-
-    var image4 = document.querySelector('.pagination li:nth-of-type('+5+') img').src;
-
-    var image5 = document.querySelector('.pagination li:nth-of-type('+6+') img').src;
 
 
 
 //check what image is currently being viewed
-    if (current.src == image1) {
+    if (current.src == movieImage1) {
 
-        current.src = image2;
+        //change image
+        current.src = movieImage2;
 
 
 
-    }else if(current.src == image2){
+        //Change h3 tag
+        currentName.innerText = movieName2;
 
-        current.src = image3;
 
-    }else if(current.src == image3){
 
-        current.src = image4;
 
-    }else if(current.src == image4){
+        //Change p tag
+        currentDescription.innerText = movieDescription2;
 
-        current.src = image5;
 
-    }else if(current.src == image5){
 
-        current.src = image1;
+
+    }else if(current.src == movieImage2){
+
+        //change image
+        current.src = movieImage3;
+
+        //Change h3 tag
+        currentName.innerText = movieName3;
+
+
+        //Change p tag
+        currentDescription.innerText = movieDescription3;
+
+    }else if(current.src == movieImage3){
+
+        //change image
+        current.src = movieImage4;
+
+        //Change h3 tag
+        currentName.innerText = movieName4;
+
+
+
+
+        //Change p tag
+        currentDescription.innerText = movieDescription4;
+
+    }else if(current.src == movieImage4){
+
+        //change image
+        current.src = movieImage5;
+
+        //Change h3 tag
+        currentName.innerText = movieName5;
+
+
+
+
+        //Change p tag
+        currentDescription.innerText = movieDescription5;
+
+    }else if(current.src == movieImage5){
+
+        //change image
+        current.src = movieImage1;
+
+        //Change h3 tag
+        currentName.innerText = movieName1;
+
+
+
+
+        //Change p tag
+        currentDescription.innerText = movieDescription1;
     }
 
 
@@ -112,41 +203,86 @@ function previousImage(event) {
     //check link of current image
     var current = document.querySelector('#gallery img');
 
+    //check name of current movie
+    var currentName = document.querySelector('#gallery h3');
 
-    //links to all photos
-    var image1 = document.querySelector('.pagination li:nth-of-type(' + 2 + ') img').src;
+    //check descr of current movie
+    var currentDescription = document.querySelector('.author');
 
-    var image2 = document.querySelector('.pagination li:nth-of-type(' + 3 + ') img').src;
-
-    var image3 = document.querySelector('.pagination li:nth-of-type(' + 4 + ') img').src;
-
-    var image4 = document.querySelector('.pagination li:nth-of-type(' + 5 + ') img').src;
-
-    var image5 = document.querySelector('.pagination li:nth-of-type(' + 6 + ') img').src;
 
 
 
     //check what image is currently being viewed
-    if (current.src == image5) {
+    if (current.src == movieImage5) {
 
-        current.src = image4;
+        //change image
+        current.src = movieImage4;
+
+        //Change h3 tag
+        currentName.innerText = movieName4;
 
 
-    }else if(current.src == image4){
 
-        current.src = image3;
 
-    }else if(current.src == image3){
+        //Change p tag
+        currentDescription.innerText = movieDescription4;
 
-        current.src = image2;
 
-    }else if(current.src == image2){
+    }else if(current.src == movieImage4){
 
-        current.src = image1;
+        //change image
+        current.src = movieImage3;
 
-    }else if(current.src == image1){
+        //Change h3 tag
+        currentName.innerText = movieName3;
 
-        current.src = image5;
+
+
+
+        //Change p tag
+        currentDescription.innerText = movieDescription3;
+
+    }else if(current.src == movieImage3){
+
+        //change image
+        current.src = movieImage2;
+
+        //Change h3 tag
+        currentName.innerText = movieName2;
+
+
+
+
+        //Change p tag
+        currentDescription.innerText = movieDescription2;
+
+    }else if(current.src == movieImage2){
+
+        //change image
+        current.src = movieImage1;
+
+        //Change h3 tag
+        currentName.innerText = movieName1;
+
+
+
+
+        //Change p tag
+        currentDescription.innerText = movieDescription1;
+
+    }else if(current.src == movieImage1){
+
+        //change image
+        current.src = movieImage5;
+
+        //Change h3 tag
+        currentName.innerText = movieName5;
+
+
+
+
+        //Change p tag
+        currentDescription.innerText = movieDescription5;
     }
 
 
