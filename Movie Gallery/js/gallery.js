@@ -59,6 +59,9 @@ function nextImage(event){
     //check link of current image
 var current = document.querySelector('#gallery img');
 
+    //check name of current movie
+    var currentName = document.querySelector('#gallery h3');
+
 
 //links to all photos
     var image1 = document.querySelector('.pagination li:nth-of-type('+2+') img').src;
@@ -74,7 +77,29 @@ var current = document.querySelector('#gallery img');
 
 
 //check what image is currently being viewed
-    current.src = image2;
+    if (current.src == image1) {
+
+        current.src = image2;
+
+
+
+    }else if(current.src == image2){
+
+        current.src = image3;
+
+    }else if(current.src == image3){
+
+        current.src = image4;
+
+    }else if(current.src == image4){
+
+        current.src = image5;
+
+    }else if(current.src == image5){
+
+        current.src = image1;
+    }
+
 
 
 }
@@ -101,7 +126,32 @@ function previousImage(event) {
 
 
 
-    current.src = image5;
+    //check what image is currently being viewed
+    if (current.src == image5) {
+
+        current.src = image4;
+
+
+    }else if(current.src == image4){
+
+        current.src = image3;
+
+    }else if(current.src == image3){
+
+        current.src = image2;
+
+    }else if(current.src == image2){
+
+        current.src = image1;
+
+    }else if(current.src == image1){
+
+        current.src = image5;
+    }
+
+
+
+
 
 }
 
