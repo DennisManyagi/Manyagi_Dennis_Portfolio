@@ -20,21 +20,20 @@ xhr.onload = function(){
 
             //format HTML with encapsulated variables
             movie += '<article>';
-            movie += '<p><img src =" '+ data.movies[3].image + '"alt="' + data.movies[3].name+ '"></p>';
-            movie += '<h3>' + data.movies[3].name + '</h3>';
-            movie += '<p class="author">'+data.movies[3].description+'</p>';
+            movie += '<p><img src =" '+ data.movies[0].image + '"alt="' + data.movies[0].name+ '"></p>';
+            movie += '<h3>' + data.movies[0].name + '</h3>';
+            movie += '<p class="author">'+data.movies[0].description+'</p>';
             movie += '</article>';
 
 
+        var thumbnails = '';
 
-            var thumbnails ='';
+        thumbnails += '<li><img src ="'+data.movies[0].image+'"</li>';
+        thumbnails += '<li><img src ="'+data.movies[1].image+'"</li>';
+        thumbnails += '<li><img src ="'+data.movies[2].image+'"</li>';
+        thumbnails += '<li><img src ="'+data.movies[3].image+'"</li>';
+        thumbnails += '<li><img src ="'+data.movies[4].image+'"</li>';
 
-            //loop through data and add images to list items
-          for (var i = 0; i < data.movies.length; i++){
-
-              thumbnails += '<li><img src =" '+ data.movies[i].image + '"alt="' + data.movies[i].name+ '"></li>';
-
-          }
 
 
         //insert main image after h2 tag on html form
@@ -54,146 +53,59 @@ xhr.onload = function(){
 
 
 
-
-
-
-
-//change image function
-function changeImage(event) {
-
-    //keep track of target source
-    var image = event.target.src;
-
-    //keep track of parent element holding source of image
-    var parent = event.target.parentElement;
-
-    //keep track of what is being displayed as large image
-    var largeImage = document.querySelector('galleryimg');
-
-
-//change image
-    largeImage.src = image;
-
-//change active indicator
-    document.querySelector("#gallery.active").classList.remove("active");
-    parent.className = 'active';
-
-}
-
-
-//Attach Event Listeners to all thumbnails
-var thumbnails = document.querySelectorAll('.pagination img');
-for(var i = 0; i < thumbnails.length; i++){
-
-    thumbnails[i].addEventListener('click',changeImage);
-}
-
-//Change Image via Thumbnail
-function changeImage(event){
-    var image = event.target.src;
-    var parent = event.target.parentElement;
-    var largeImage = document.querySelector('#galleryimg');
-
-    //Change Image
-    largeImage.src = image;
-
-    //Change active indicator
-    document.querySelector("gallery.active").classList.remove("active");
-    parent.className = 'active';
-}
-
-
 //Change via Next Button
 function nextImage(event){
 
-
-    //Find Current Image
-    var thumbnails = document.querySelectorAll('.pagination li');
-    var activeIndex; //js (Starts w/ 0)
-    var activeListItem; //css (starts /w 1)
-    for(var i=0; i < thumbnails.length; i++){
-
-        if (thumbnails[i].className == 'active'){
-            activeIndex = i;
-            activeListItem = i+1;
-        }
-    }
-
-    //Determine Next Image
-    if (activeIndex >= 5){
-
-        var nextIndex = 1;
-        var nextListItem = 2;
-    } else{
-        var nextIndex = activeIndex + 1;
-        var nextListItem = activeListItem + 1;
-    }
+    //check link of current image
+var current = document.querySelector('#gallery img');
 
 
-    //Change Large Image
-    var image = document.querySelector('.pagination li:nth-of-type('+nextListItem+ ') img').src;
-    var largeImage = document.querySelector('#galleryimg');
-    largeImage.src = image;
+//links to all photos
+    var image1 = document.querySelector('.pagination li:nth-of-type('+2+') img').src;
 
-    //Change active Indicator
-    document.querySelector("#gallery.active").classList.remove("active");
-    var parent = document.querySelector('pagination li:nth-of-type('+nextListItem+ ')');
-    parent.className = 'active';
+    var image2 = document.querySelector('.pagination li:nth-of-type('+3+') img').src;
+
+    var image3 = document.querySelector('.pagination li:nth-of-type('+4+') img').src;
+
+    var image4 = document.querySelector('.pagination li:nth-of-type('+5+') img').src;
+
+    var image5 = document.querySelector('.pagination li:nth-of-type('+6+') img').src;
+
+
+
+//check what image is currently being viewed
+    current.src = image2;
+
 
 }
 
 //Change via Previous Button
-function previousImage(event){
-
-
-    //Find Current Image
-    var thumbnails = document.querySelectorAll('.pagination li');
-    var activeIndex; //js(starts /w 0)
-    var activeListItem; //css (Starts /w 1)
-    for (var i=0; i < thumbnails.length; i++){
-
-        if (thumbnails[i].className == 'active') {
-
-            activeIndex = i;
-            activeListItem = i + 1;
-        }
-    }
+function previousImage(event) {
 
 
 
-
-    //Determine Previous Image
-    if (activeIndex <= 1){
-
-        var previousIndex = 5;
-        var previousListItem = 6;
-    } else{
-
-        var previousIndex = activeIndex - 1;
-        var previousListItem = activeListItem - 1;
-    }
+    //check link of current image
+    var current = document.querySelector('#gallery img');
 
 
-    //Change Large Image
-    var image = document.querySelector('.pagination li:nth-of-type('+previousListItem+') img').src;
-    var largeImage = document.querySelector('#galleryimg');
+    //links to all photos
+    var image1 = document.querySelector('.pagination li:nth-of-type(' + 2 + ') img').src;
 
-    largeImage = image;
+    var image2 = document.querySelector('.pagination li:nth-of-type(' + 3 + ') img').src;
+
+    var image3 = document.querySelector('.pagination li:nth-of-type(' + 4 + ') img').src;
+
+    var image4 = document.querySelector('.pagination li:nth-of-type(' + 5 + ') img').src;
+
+    var image5 = document.querySelector('.pagination li:nth-of-type(' + 6 + ') img').src;
 
 
 
-    //Change active indicator
-    document.querySelector("#gallery.active").classList.remove("active");
-    var parent = document.querySelector('.pagination li:nth-of-type('+previousListItem+ ')');
-    parent.className = 'active';
+    current.src = image5;
 
 }
 
-//Attach Event Listeners to all thumbnails
-var thumbnails = document.querySelectorAll('.pagination img');
-for(var i = 0; i < thumbnails.length; i++){
-    thumbnails[i].addEventListener("click", changeImage);
-}
+
 
 //Attach Event to Next/Previous
 var next = document.querySelector('.pagination li:last-of-type button');
