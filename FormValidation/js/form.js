@@ -7,7 +7,7 @@ title.innerHTML = 'Watch Anime Sign Up';
 
 var background = document.querySelector('body');
 
-console.log(background);
+
 
 background.style.backgroundImage = "url('https://gallery.mailchimp.com/217bb4cb236a854f10f4f13b9/images/079db29a-a9d9-455f-a266-fe37995aba90.jpg')";
 
@@ -16,3 +16,24 @@ background.style.backgroundImage = "url('https://gallery.mailchimp.com/217bb4cb2
 var info = document.querySelector('p');
 
 info.innerHTML = 'Stream and buy official anime including My Hero Academia, Drifters and Fairy Tail. Watch free anime online or subscribe for more. Start your free trial today.';
+
+
+//disable submit button
+
+var button = document.querySelector('button');
+
+button.disabled = true;
+
+
+//enable button if all validation checks are approved
+//create validation errors for every single input
+//validation must display an error message on the inputs if not filled in
+
+
+
+
+
+
+
+//create a thank you screen
+//replace the form content only if validation passes
