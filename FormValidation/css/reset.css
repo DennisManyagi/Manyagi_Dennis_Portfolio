@@ -1,5 +1,5 @@
 /* CSS RESET
-====================================================================================================
+==================================================================================================== 
 ====================================================================================================
 */
 
@@ -17,22 +17,22 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video,
 ::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    text-decoration: none;
+	box-sizing: border-box;
+	margin: 0; 
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
 }
 
 /* HTML5 - Older browser support
 ====================================================================== */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-    display: block;
+	display: block;
 }
 
 /* BASE 10
@@ -53,20 +53,20 @@ ol, ul, li { list-style: none; }
 blockquote, q { quotes: none; }
 blockquote:before, blockquote:after,
 q:before, q:after {
-    content: '';
-    content: none;
+	content: '';
+	content: none;
 }
 
 /* TABLES
 ====================================================================== */
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /* IMAGES
 ====================================================================== */
 img {
-    display: block;
-    width: 100%;
+	display: block;
+	width: 100%;
 }
