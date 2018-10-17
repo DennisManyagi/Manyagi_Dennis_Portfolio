@@ -1,3 +1,6 @@
+
+var form = document.querySelector('#form');
+
 //change title
 var title = document.querySelector('h2');
 
@@ -20,9 +23,11 @@ info.innerHTML = 'Stream and buy official anime including My Hero Academia, Drif
 
 //disable submit button
 
-var button = document.querySelector('button');
+var button = document.querySelector('[type=submit]');
 
 button.disabled = true;
+
+console.log(button);
 
 
 //enable button if all validation checks are approved
@@ -35,7 +40,7 @@ function  validateForm(event) {
 
 
 
-    var form = document.querySelector('form');
+    var form = document.querySelector('#form');
 
     var fields = form.querySelectorAll('input');
 
@@ -56,7 +61,7 @@ function  validateForm(event) {
         if (valid == true){
 
             var submit = form.querySelector('[type=submit]');
-            submit.removeAttribute('disabled');
+            submit.disabled = false;
         }
     }
 
@@ -73,9 +78,12 @@ function validateRequired(event){
     var error = '<label class="error">This field is required!</label>';
 
 
+    console.log(parent);
+
+
     if (!target.value.length){
 
-        if (!parent.querySelector('.error')){
+        if (!target.querySelector('.error')){
 
             parent.insertAdjacentHTML('beforeend', error);
 
@@ -88,13 +96,15 @@ function validateRequired(event){
 }
 
 //check if submissions are allowed
-var requiredFields = document.querySelectorAll('input');
+var requiredFields = form.querySelectorAll('input');
 
 for (var i = 0; 0 < requiredFields.length ; i++){
 
 
     requiredFields[i].addEventListener('input', validateForm);
     requiredFields[i].addEventListener('blur', validateRequired);
+
+
 }
 
 
@@ -109,7 +119,7 @@ function send(event){
 
     event.preventDefault();//stop submission
 
-    var form = document.querySelector('form');
+    var form = document.querySelector('#form');
 
     var message = '<h2>Thank you!</h2><p>You are so awesome, sharks love you!</p>';
 
@@ -117,7 +127,7 @@ function send(event){
 
     var target = event.target;
 
-    var disabled = target.classList.contains('disabled');
+    var disabled = target.hasAttribute('disabled');
 
     if (disabled == false){
 
