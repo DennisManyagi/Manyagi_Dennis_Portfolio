@@ -26,8 +26,8 @@ function getUsers(){
 
 }
 
-
-
+document.getElementById('getUsers').addEventListener('click',getUsers);
+/*
 
 // Match your selected Theme for the month (sharks, travel app,  web design, etc).
 // Use valid ES6 Fetch Syntax to connect to and retrieve 3 different types of data.
@@ -88,3 +88,5 @@ function getPosts(){
 
 
 }
+
+*/
