@@ -1,3 +1,7 @@
+
+
+
+
 // Pick an open source API you can pull from.
 // https://jsonplaceholder.typicode.com/posts
 
@@ -8,13 +12,14 @@ function getUsers(){
 
             let output = '<h2 class="mb-4">Movie Goers</h2>';
             console.log(data);
+
             data.forEach(function(user){
 
                 output += `
                 <ul class="list-group mb-3">
-                <li class="list-group-item"> ID: ${user.id}</li>
                 <li class="list-group-item"> Name: ${user.name}</li>
                 <li class="list-group-item"> Contact Info: ${user.email}</li>
+                <li class="list-group-item"> City: ${user.address.city}</li>
 </ul>`;
 
             });
@@ -29,6 +34,7 @@ function getUsers(){
 document.getElementById('getUsers').addEventListener('click',getUsers);
 document.getElementById('getMovies').addEventListener('click',getMovies);
 document.getElementById('getReviews').addEventListener('click',getReviews);
+
 
 
 // Match your selected Theme for the month (sharks, travel app,  web design, etc).
