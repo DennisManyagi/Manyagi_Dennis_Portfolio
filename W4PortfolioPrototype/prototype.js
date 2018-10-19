@@ -6,7 +6,7 @@ function getUsers(){
         .then((response) => response.json())
         .then((data) =>{
 
-            let output = '<h2 class="mb-4">Users</h2>';
+            let output = '<h2 class="mb-4">Movie Goers</h2>';
             console.log(data);
             data.forEach(function(user){
 
@@ -14,7 +14,7 @@ function getUsers(){
                 <ul class="list-group mb-3">
                 <li class="list-group-item"> ID: ${user.id}</li>
                 <li class="list-group-item"> Name: ${user.name}</li>
-                <li class="list-group-item"> Email: ${user.email}</li>
+                <li class="list-group-item"> Contact Info: ${user.email}</li>
 </ul>`;
 
             });
@@ -27,7 +27,9 @@ function getUsers(){
 }
 
 document.getElementById('getUsers').addEventListener('click',getUsers);
-/*
+document.getElementById('getMovies').addEventListener('click',getMovies);
+document.getElementById('getReviews').addEventListener('click',getReviews);
+
 
 // Match your selected Theme for the month (sharks, travel app,  web design, etc).
 // Use valid ES6 Fetch Syntax to connect to and retrieve 3 different types of data.
@@ -35,20 +37,21 @@ document.getElementById('getUsers').addEventListener('click',getUsers);
 // For example, upcoming weather, User names, Location title, etc.
 // Must pull at least two (2) different images down to your page.
 
-function getPhotos(){
-    fetch('https://jsonplaceholder.typicode.com/photos')
+function getMovies(){
+    fetch('https://raw.githubusercontent.com/FEND16/movie-json-data/master/json/movies-in-theaters.json')
         .then((response) => response.json())
         .then((data) =>{
 
-            let output = '<h2 class="mb-4">Users</h2>';
+            let output = '<h2 class="mb-4">Movies</h2>';
             console.log(data);
-            data.forEach(function(user){
+            data.forEach(function(movies){
 
                 output += `
                 <ul class="list-group mb-3">
-                <li class="list-group-item"> ID: ${user.id}</li>
-                <li class="list-group-item"> Name: ${user.name}</li>
-                <li class="list-group-item"> Email: ${user.email}</li>
+                <li class="list-group-item"> Name: ${movies.title}</li>
+                <li class="list-group-item"> Year: ${movies.year}</li>
+                <li class="list-group-item"> Story: ${movies.storyline}</li>
+                <li class="list-group-item"><img src="${movies.posterurl}"></li>
 </ul>`;
 
             });
@@ -62,12 +65,12 @@ function getPhotos(){
 
 // Retrieve text based data from the API
 
-function getPosts(){
+function getReviews(){
     fetch('https://jsonplaceholder.typicode.com/posts')
         .then((response) => response.json())
         .then((data) =>{
 
-            let output = '<h2 class="mb-4">Posts</h2>';
+            let output = '<h2 class="mb-4">Movie Reviews</h2>';
             console.log(data);
             data.forEach(function(post){
 
@@ -89,4 +92,3 @@ function getPosts(){
 
 }
 
-*/
