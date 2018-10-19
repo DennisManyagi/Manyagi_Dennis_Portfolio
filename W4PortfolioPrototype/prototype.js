@@ -66,22 +66,25 @@ function getMovies(){
 // Retrieve text based data from the API
 
 function getReviews(){
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('https://raw.githubusercontent.com/FEND16/movie-json-data/master/json/movies-in-theaters.json')
         .then((response) => response.json())
         .then((data) =>{
 
-            let output = '<h2 class="mb-4">Movie Reviews</h2>';
+            let output = '<h2 class="mb-4">More Info</h2>';
             console.log(data);
             data.forEach(function(post){
 
-                output += `<div class="card card-body mb-3">
-                    <h3>${post.title}</h3>
-                    <p>${post.body}</p>
-
-
-
-                    </div>
-                `;
+                output += `
+                <ul class="list-group mb-3">
+                
+                <li class="list-group-item"> Name: ${post.title}</li>
+                <li class="list-group-item"> Genre: ${post.genres}</li>
+                <li class="list-group-item"> Actors: ${post.actors}</li>
+                <li class="list-group-item"> Rating: ${post.imdbRating}</li>
+                <li class="list-group-item"> Release: ${post.releaseDate}</li>
+                <li class="list-group-item"><img src="${post.posterurl}"></li>
+                
+</ul>`;
 
             });
 
