@@ -1,4 +1,12 @@
+$.ajax({
+    url: 'https://randomuser.me/api/?results=5',
+    dataType: 'json',
+    success: function(data) {
+        console.log(data);
 
+
+    }
+});
 
 
 
@@ -31,9 +39,11 @@ function getUsers(){
 
 }
 
+
 document.getElementById('getUsers').addEventListener('click',getUsers);
 document.getElementById('getMovies').addEventListener('click',getMovies);
 document.getElementById('getReviews').addEventListener('click',getReviews);
+
 
 
 
